@@ -4,9 +4,11 @@
 
 - 00-Inbox/: 세션 중 캡처한 미분류 메모. 아직 정리되지 않은 상태.
 
-- 01-Projects/, 02-Areas/, 03-Resources/, 04-Archives/: PARA 분류.
+- 01-Projects/{프로젝트명}/: PARA 분류이자 동시에 **실제 소스코드 저장 위치**. 바이브 코딩 팀(기획자·코드 작성자·코드 리뷰어)이 여기에 직접 코드를 만들고 수정한다.
 
-- Sessions/: 코딩 세션 로그. 파일명은 YYYY-MM-DD-{프로젝트명}.md
+- 02-Areas/, 03-Resources/, 04-Archives/: PARA 분류.
+
+- Sessions/: 코딩 세션 로그. 파일명은 YYYY-MM-DD-{프로젝트명}.md. Agent Team으로 진행한 세션은 YYYY-MM-DD-{프로젝트명}-{기획|구현|리뷰}.md 형식으로, 역할별로 각자 다른 파일을 만든다.
 
 ## 노트 작성 컨벤션
 

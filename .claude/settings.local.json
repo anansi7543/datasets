@@ -1,0 +1,27 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Write|Edit|mcp__.*",
+        "hooks": [{ "type": "command",
+          "command": ".claude/hooks/block-private-access.sh" }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [{ "type": "command",
+          "command": ".claude/hooks/ensure-frontmatter.sh" }]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [{ "type": "command",
+          "command": ".claude/hooks/check-review-verdict.sh" }]
+      }
+    ]
+  }
+}
